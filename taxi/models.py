@@ -19,7 +19,7 @@ class Driver(AbstractUser):
 
     first_name = models.CharField(max_length=150, blank=False)
     last_name = models.CharField(max_length=150, blank=False)
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, blank=True, null=True, default=None)
 
     class Meta:
         verbose_name = "driver"
